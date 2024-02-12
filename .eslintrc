@@ -1,0 +1,6 @@
+{
+  "extends": ["eslint-config-js-stack/react"],
+  "env": {
+    "browser": false
+  }
+}
