@@ -1,8 +1,8 @@
 import { css, styled } from 'styled-components/native';
-import { defaultTheme } from 'src/theme';
+import { DefaultThemeColors } from 'src/theme';
 
 interface ContainerStyleProps {
-  bgColor: (typeof defaultTheme.COLORS)[keyof typeof defaultTheme.COLORS];
+  bgColor: DefaultThemeColors;
 }
 
 export const Container = styled.View<ContainerStyleProps>`
@@ -12,7 +12,6 @@ export const Container = styled.View<ContainerStyleProps>`
   gap: 8px;
   border-radius: 8px;
   background-color: ${({ bgColor }) => bgColor};
-  position: relative;
 `;
 
 export const Value = styled.Text`
@@ -28,5 +27,6 @@ export const Subtitle = styled.Text`
     font-size: ${theme.FONT_SIZE.SM}px;
     font-family: ${theme.FONT_FAMILY.REGULAR};
     color: ${theme.COLORS.GRAY_200};
+    text-align: center;
   `}
 `;

@@ -39,3 +39,15 @@ export const RegularTitle = styled.Text`
     color: ${theme.COLORS.GRAY_100};
   `}
 `;
+
+export const SectionContainer = styled.View`
+  margin-top: 24px;
+`;
+
+export const SectionTitle = styled.Text`
+  ${({ theme }) => css`
+    font-size: ${theme.FONT_SIZE.MD}px;
+    font-family: ${theme.FONT_FAMILY.BOLD};
+    color: ${theme.COLORS.GRAY_100};
+  `}
+`;
