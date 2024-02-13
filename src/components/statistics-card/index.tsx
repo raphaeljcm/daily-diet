@@ -34,6 +34,12 @@ export function StatisticsCard({
   const isPositive = value > 0;
   const Icon = getIcon(isPositive, asBackButton);
 
+  const iconStyle = {
+    position: 'absolute',
+    top: 16,
+    [iconSide]: 16,
+  } as const;
+
   const handleGoToHomePage = () => navigation.navigate('home');
 
   const getBgColor = () => {
@@ -48,7 +54,7 @@ export function StatisticsCard({
         <TouchableOpacity
           activeOpacity={0.7}
           onPress={handleGoToHomePage}
-          style={{ position: 'absolute', top: 16, [iconSide]: 16 }}
+          style={{ ...iconStyle }}
         >
           <Icon
             size={24}
@@ -59,7 +65,7 @@ export function StatisticsCard({
         <Icon
           size={24}
           color={isPositive ? COLORS.GREEN_DARK : COLORS.RED_DARK}
-          style={{ position: 'absolute', top: 16, [iconSide]: 16 }}
+          style={{ ...iconStyle }}
         />
       ) : null}
       <S.Value>{formatter ? formatter(value) : value}</S.Value>
