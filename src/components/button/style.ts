@@ -23,6 +23,11 @@ export const Button = styled(TouchableOpacity)<ButtonStyleProps>`
       ? theme.COLORS.GRAY_100
       : theme.COLORS.WHITE};
   `};
+  ${({ theme, variant }) =>
+    variant === 'secondary' &&
+    css`
+      border: 1px solid ${theme.COLORS.GRAY_100};
+    `}
 `;
 
 interface TitleProps {

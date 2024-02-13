@@ -31,3 +31,6 @@ export const defaultTheme = {
     XL: 32,
   },
 } as const;
+
+export type DefaultThemeColors =
+  (typeof defaultTheme.COLORS)[keyof typeof defaultTheme.COLORS];
