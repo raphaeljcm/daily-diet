@@ -18,7 +18,10 @@ export const defaultTheme = {
 
     WHITE: '#FFFFFF',
   },
-  FONT_FAMILY: {},
+  FONT_FAMILY: {
+    REGULAR: 'Nunito_400Regular',
+    BOLD: 'Nunito_700Bold',
+  },
   FONT_SIZE: {
     XS: 12,
     SM: 14,
