@@ -10,11 +10,11 @@ interface DefaultHeaderProps {
 export function DefaultHeader({ title, bgColor }: DefaultHeaderProps) {
   const navigation = useNavigation();
 
-  const handleGoHome = () => navigation.navigate('home');
+  const handleGoBack = () => navigation.goBack();
 
   return (
     <S.Container bgColor={bgColor}>
-      <S.BackButton activeOpacity={0.7} onPress={handleGoHome}>
+      <S.BackButton activeOpacity={0.7} onPress={handleGoBack}>
         <S.Icon />
       </S.BackButton>
       <S.Title>{title}</S.Title>

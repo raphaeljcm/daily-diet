@@ -2,8 +2,17 @@ import { DefaultHeader } from '@components/default-header';
 import * as S from './styles';
 import { Button } from '@components/button';
 import { PencilSimple, Trash } from 'phosphor-react-native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 export function Meal() {
+  const navigation = useNavigation();
+  const { params } = useRoute();
+  const { id } = params as { id: string };
+
+  const handleEditMeal = () => {
+    navigation.navigate('change-meal', { id });
+  };
+
   return (
     <S.Container>
       <DefaultHeader title="Refeição" />
@@ -29,7 +38,12 @@ export function Meal() {
         </S.ContentContainer>
 
         <S.ActionsContainer>
-          <Button title="Editar refeição" Icon={PencilSimple} fullWidth />
+          <Button
+            title="Editar refeição"
+            Icon={PencilSimple}
+            onPress={handleEditMeal}
+            fullWidth
+          />
           <Button
             title="Excluir refeição"
             variant="secondary"

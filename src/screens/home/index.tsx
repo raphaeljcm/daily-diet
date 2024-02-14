@@ -16,6 +16,8 @@ export function Home() {
 
   const handleGoToMeal = (id: string) => navigation.navigate('meal', { id });
 
+  const handleGoToNewMeal = () => navigation.navigate('change-meal');
+
   return (
     <S.Container>
       <S.Header>
@@ -38,7 +40,12 @@ export function Home() {
 
       <S.MealsContainer>
         <S.RegularTitle>Refeições</S.RegularTitle>
-        <Button title="Nova refeição" Icon={Plus} fullWidth />
+        <Button
+          title="Nova refeição"
+          Icon={Plus}
+          onPress={handleGoToNewMeal}
+          fullWidth
+        />
       </S.MealsContainer>
 
       <SectionList

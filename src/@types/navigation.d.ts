@@ -6,6 +6,11 @@ export declare global {
       meal: {
         id: string;
       };
+      'change-meal':
+        | {
+            id: string;
+          }
+        | undefined;
     }
   }
 }
